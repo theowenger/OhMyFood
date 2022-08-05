@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@font-face { /* Définition d'une nouvelle police nommée shrikhand */
+  font-family: "shrikhand";
+  src: url("font/shrikhand/Shrikhand-Regular.eot");
+  src: url("font/shrikhand//Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("font/shrikhand/Shrikhand-Regular.woff") format("woff"), url("font/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("font/shrikhand/Shrikhand-Regular.svg#shrikhand") format("svg");
+}
+@font-face { /* Définition d'une nouvelle police nommée shrikhand */
+  font-family: "roboto";
+  src: url("../font/roboto/roboto-Medium.eot");
+  src: url("../font/roboto/roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../font/roboto/roboto-Medium.woff") format("woff"), url("../font/roboto/roboto-Medium.ttf") format("truetype"), url("../font/roboto/roboto-Medium.svg#roboto") format("svg");
+}
+h1 {
+  font-family: shrikhand, impact, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: roboto, impact, Helvetica, sans-serif;
+}
+
+.discover {
+  background-color: lightpink;
+}
+
+/*# sourceMappingURL=style.css.map */

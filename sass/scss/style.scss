@@ -1,0 +1,17 @@
+@import "button";
+@import "effets";
+@import "function";
+@import "mixins";
+@import "variables";
+
+h1 {
+    font-family: shrikhand,impact, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: roboto,impact, Helvetica, sans-serif;
+}
+
+.discover {
+    background-color: lightpink;
+}
