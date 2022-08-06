@@ -5,13 +5,159 @@
 @import "variables";
 
 h1 {
-    font-family: shrikhand,impact, Arial, Helvetica, sans-serif;
+    font-family: shrikhand, impact, Arial, Helvetica, sans-serif;
 }
 
-h2 {
-    font-family: roboto,impact, Helvetica, sans-serif;
+h2,
+h3,
+p {
+    font-family: roboto, impact, Helvetica, sans-serif;
+}
+
+header {
+    & .menulink {
+        & .fa-arrow-left {
+            position: relative;
+            top: 30px;
+            left: 25px;
+            font-size: 150%;
+        }
+    
+        &__ohmyfood {
+            display: block;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+    
+        &__img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+    }
+    & .title__adress {
+        background-color: $font-color;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 3rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        & .fa-location-dot {
+            margin-right: 20px;
+        }
+    }
+}
+
+
+.menu {
+    position: relative;
+    bottom: 60px;
+    padding: 20px;
+    background-color: $font-color;
+    border-radius: 35px 35px 0px 0px;
+    & h1 {
+        letter-spacing: 1px;
+        font-size: 2.2rem;
+    }
+
+    & .fa-heart {
+        position: sticky;
+        left: 150%;
+    }
+
+    & b {
+        position:sticky;
+        left: 85%;
+    }
+
+    &__starter {
+
+        & .menu__choice {
+            @include menu-block;
+        }
+    }
+
+    &__main {
+
+        & .menu__choice {
+            @include menu-block;
+        }
+    }
+
+    &__dessert {
+
+        & .menu__choice {
+            @include menu-block;
+        }
+    }
+
+    &__command {
+        @include btn-command;
+    }
 }
 
 .discover {
-    background-color: lightpink;
+    background-color: $font-color;
+    text-align: center;
+    padding: 5%;
+    &__btn {
+        @include btn-command
+    }
+}
+
+.utilisation {
+    padding: 5%;
+    padding-top: 2%;
+    & .exploration {
+
+        &__card {
+            @include menu-block;
+            background-color: $font-color;
+        }
+        & i {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+}
+
+.restaurant {
+    background-color: $font-color;
+    padding: 5%;
+    padding-top: 2%;
+
+    .restaurant-bloc__card {
+        background-color: #fff;
+
+        .card__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+.bottom {
+    background-color: #353535;
+    padding: 5%;
+    padding-top: 7%;
+    color: white;
+    line-height: 0.8rem;
+    .bottom__ohmyfood {
+        width: 30%;
+        filter: invert(100%);
+    }
+    & .fa-utensils {
+        font-size: 1rem;
+        margin-right: 15px;
+    }
+    & .fa-handshake-angle {
+        font-size: 0.8rem;
+        margin-right: 12px;
+    }
 }

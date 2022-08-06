@@ -1,0 +1,25 @@
+@mixin menu-block {
+    background-color: #fff;
+    border: 1px $font-color solid;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 2px 5px lightgray;
+    margin-bottom: 5%;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    line-height: 0.5rem;
+    font-size: 1.2rem;
+}
+
+@mixin btn-command {
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    width: 250px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    border: none;
+    border-radius: 35px 35px 35px 35px;
+    font-size: 1.2rem;
+}
