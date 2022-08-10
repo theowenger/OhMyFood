@@ -4,11 +4,49 @@
     border-radius: 20px 20px 20px 20px;
     box-shadow: 2px 2px 5px lightgray;
     margin-bottom: 5%;
-    padding-left: 3%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 0.5rem;
     font-size: 1.2rem;
+    width: 440px;
+    height: 65px;
+    & .menu__description {
+        position: relative;
+        bottom: 5px;
+        display: inline-block;
+        width: 360px;
+        white-space: nowrap;
+        line-height: 1.1rem;
+    }
+    .fa-circle-check {
+
+        position: relative;
+        left: 80%;
+        bottom: 100px;
+        background-color: $third-color;
+        width: 0px;
+        height: 135%;
+        text-align: center; 
+        line-height: 90px;
+        border-radius: 0px 20px 20px 0px;
+        font-size: 2rem;
+        color: #fff;
+        transition: width .4s;
+        animation-direction: reverse;
+    }
+    &:active .fa-circle-check {
+        width: 90px;
+    }
+    &:active .menu__description {
+        width: 70%;
+       flex-wrap: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+    }
+
 }
 
 @mixin btn-command {
@@ -22,4 +60,63 @@
     border: none;
     border-radius: 35px 35px 35px 35px;
     font-size: 1.2rem;
+font-family: roboto, impact, Helvetica, sans-serif;
+    &:hover {
+        filter: brightness(115%);
+        @include hover-zoom;
+    }
+    &:not(:hover) {
+        @include over-dezoom;
+    }
+}
+
+@mixin number-list {
+    font-family: roboto;
+    font-size: 1.1rem;
+    font-weight: normal;
+    position: relative;
+    right: 30px;
+    color: #fff;
+    background-color: $primary-color;
+    border-radius: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@mixin card-new {
+    position:sticky;
+    bottom: 200%;
+    left: 70%;
+    width: 100px;
+    height: 30px;
+    line-height: 2rem;
+    text-align: center;
+    color: green;
+    background-color: $third-color;
+}
+
+@mixin menu-border {
+    width: 50px;
+    padding-bottom: 5px;
+    border-bottom: 4px $third-color solid;  
+    font-weight: normal;  
+}
+@mixin hover-zoom {
+    transition-duration: 300ms;
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
+
+@mixin over-dezoom {
+    transition-duration: 300ms;
+    -webkit-transform:scale(1); /* Safari and Chrome */
+    -moz-transform:scale(1); /* Firefox */
+    -ms-transform:scale(1); /* IE 9 */
+    -o-transform:scale(1); /* Opera */
+    transform:scale(1);
 }

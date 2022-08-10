@@ -4,6 +4,10 @@
   border-radius: 25px 25px 25px 25px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: shrikhand, impact, Arial, Helvetica, sans-serif;
 }
@@ -15,8 +19,8 @@ p {
 }
 
 header .menulink .fa-arrow-left {
-  position: relative;
-  top: 30px;
+  position: absolute;
+  top: 25px;
   left: 25px;
   font-size: 150%;
 }
@@ -25,22 +29,25 @@ header .menulink__ohmyfood {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   padding-top: 20px;
 }
 header .menulink__img {
   width: 100%;
   height: 350px;
   object-fit: cover;
+  margin-top: 20px;
 }
 header .title__adress {
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
   width: 100%;
   height: 50px;
+  padding-bottom: 5%;
   text-align: center;
-  line-height: 3rem;
+  line-height: 4.5rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  box-shadow: inset 0em 5px 20px #cfcfcf;
 }
 header .title__adress .fa-location-dot {
   margin-right: 20px;
@@ -63,7 +70,13 @@ header .title__adress .fa-location-dot {
 }
 .menu b {
   position: sticky;
-  left: 85%;
+  left: 85px;
+}
+.menu__starter h2 {
+  width: 50px;
+  padding-bottom: 5px;
+  border-bottom: 4px #99E2D0 solid;
+  font-weight: normal;
 }
 .menu__starter .menu__choice {
   background-color: #fff;
@@ -71,11 +84,69 @@ header .title__adress .fa-location-dot {
   border-radius: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px lightgray;
   margin-bottom: 5%;
-  padding-left: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 0.5rem;
   font-size: 1.2rem;
+  width: 440px;
+  height: 65px;
+}
+.menu__starter .menu__choice .menu__description {
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  width: 360px;
+  white-space: nowrap;
+  line-height: 1.1rem;
+}
+.menu__starter .menu__choice .fa-circle-check {
+  position: relative;
+  left: 80%;
+  bottom: 100px;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 135%;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 2rem;
+  color: #fff;
+  transition: width 0.4s;
+  animation-direction: reverse;
+}
+.menu__starter .menu__choice:active .fa-circle-check {
+  width: 90px;
+}
+.menu__starter .menu__choice:active .menu__description {
+  width: 70%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__starter .menu__choice:hover {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.menu__starter .menu__choice:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
+}
+.menu__main h2 {
+  width: 50px;
+  padding-bottom: 5px;
+  border-bottom: 4px #99E2D0 solid;
+  font-weight: normal;
 }
 .menu__main .menu__choice {
   background-color: #fff;
@@ -83,11 +154,69 @@ header .title__adress .fa-location-dot {
   border-radius: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px lightgray;
   margin-bottom: 5%;
-  padding-left: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 0.5rem;
   font-size: 1.2rem;
+  width: 440px;
+  height: 65px;
+}
+.menu__main .menu__choice .menu__description {
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  width: 360px;
+  white-space: nowrap;
+  line-height: 1.1rem;
+}
+.menu__main .menu__choice .fa-circle-check {
+  position: relative;
+  left: 80%;
+  bottom: 100px;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 135%;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 2rem;
+  color: #fff;
+  transition: width 0.4s;
+  animation-direction: reverse;
+}
+.menu__main .menu__choice:active .fa-circle-check {
+  width: 90px;
+}
+.menu__main .menu__choice:active .menu__description {
+  width: 70%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__main .menu__choice:hover {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.menu__main .menu__choice:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
+}
+.menu__dessert h2 {
+  width: 50px;
+  padding-bottom: 5px;
+  border-bottom: 4px #99E2D0 solid;
+  font-weight: normal;
 }
 .menu__dessert .menu__choice {
   background-color: #fff;
@@ -95,11 +224,63 @@ header .title__adress .fa-location-dot {
   border-radius: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px lightgray;
   margin-bottom: 5%;
-  padding-left: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 0.5rem;
   font-size: 1.2rem;
+  width: 440px;
+  height: 65px;
+}
+.menu__dessert .menu__choice .menu__description {
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  width: 360px;
+  white-space: nowrap;
+  line-height: 1.1rem;
+}
+.menu__dessert .menu__choice .fa-circle-check {
+  position: relative;
+  left: 80%;
+  bottom: 100px;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 135%;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 2rem;
+  color: #fff;
+  transition: width 0.4s;
+  animation-direction: reverse;
+}
+.menu__dessert .menu__choice:active .fa-circle-check {
+  width: 90px;
+}
+.menu__dessert .menu__choice:active .menu__description {
+  width: 70%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__dessert .menu__choice:hover {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.menu__dessert .menu__choice:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
 }
 .menu__command {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -112,12 +293,40 @@ header .title__adress .fa-location-dot {
   border: none;
   border-radius: 35px 35px 35px 35px;
   font-size: 1.2rem;
+  font-family: roboto, impact, Helvetica, sans-serif;
+}
+.menu__command:hover {
+  filter: brightness(115%);
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.menu__command:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
 }
 
 .discover {
   background-color: #f6f6f6;
   text-align: center;
   padding: 5%;
+  padding-bottom: 20%;
+}
+.discover__title {
+  font-size: 2rem;
+}
+.discover__description {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 .discover__btn {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -130,6 +339,25 @@ header .title__adress .fa-location-dot {
   border: none;
   border-radius: 35px 35px 35px 35px;
   font-size: 1.2rem;
+  font-family: roboto, impact, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+.discover__btn:hover {
+  filter: brightness(115%);
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.discover__btn:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
 }
 
 .utilisation {
@@ -142,12 +370,83 @@ header .title__adress .fa-location-dot {
   border-radius: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px lightgray;
   margin-bottom: 5%;
-  padding-left: 3%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 0.5rem;
   font-size: 1.2rem;
+  width: 440px;
+  height: 65px;
   background-color: #f6f6f6;
+}
+.utilisation .exploration__card .menu__description {
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  width: 360px;
+  white-space: nowrap;
+  line-height: 1.1rem;
+}
+.utilisation .exploration__card .fa-circle-check {
+  position: relative;
+  left: 80%;
+  bottom: 100px;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 135%;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 2rem;
+  color: #fff;
+  transition: width 0.4s;
+  animation-direction: reverse;
+}
+.utilisation .exploration__card:active .fa-circle-check {
+  width: 90px;
+}
+.utilisation .exploration__card:active .menu__description {
+  width: 70%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.utilisation .exploration__card__list {
+  font-family: roboto;
+  font-size: 1.1rem;
+  font-weight: normal;
+  position: relative;
+  right: 30px;
+  color: #fff;
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.utilisation .exploration__card:hover {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  background-color: #f5edff;
+  color: #9356DC;
+}
+.utilisation .exploration__card:hover .card__text {
+  color: black;
+}
+.utilisation .exploration__card:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
 }
 .utilisation .exploration i {
   margin-left: 5%;
@@ -160,12 +459,70 @@ header .title__adress .fa-location-dot {
   padding-top: 2%;
 }
 .restaurant .restaurant-bloc__card {
+  height: 300px;
   background-color: #fff;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 20px;
+  line-height: 0.5rem;
+  font-size: 1.2rem;
+  box-shadow: 0px 5px 15px #cfcfcf;
+}
+.restaurant .restaurant-bloc__card:hover {
+  box-shadow: 0px 10px 25px #cfcfcf;
+  transition-duration: 300ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.restaurant .restaurant-bloc__card:not(:hover) {
+  transition-duration: 300ms;
+  -webkit-transform: scale(1); /* Safari and Chrome */
+  -moz-transform: scale(1); /* Firefox */
+  -ms-transform: scale(1); /* IE 9 */
+  -o-transform: scale(1); /* Opera */
+  transform: scale(1);
+}
+.restaurant .restaurant-bloc__card .card__link {
+  text-decoration: none;
+  color: black;
+}
+.restaurant .restaurant-bloc__card .card__link .card__link--new {
+  position: sticky;
+  bottom: 200%;
+  left: 70%;
+  width: 100px;
+  height: 30px;
+  line-height: 2rem;
+  text-align: center;
+  color: green;
+  background-color: #99E2D0;
 }
 .restaurant .restaurant-bloc__card .card__img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 25px 25px 0px 0px;
+}
+.restaurant .restaurant-bloc__card .card__text {
+  margin-left: 20px;
+}
+.restaurant .restaurant-bloc__card .card__text--new {
+  position: relative;
+  bottom: 50px;
+  margin-left: 20px;
+}
+.restaurant .restaurant-bloc__card .fa-heart {
+  font-size: 1.9rem;
+  position: relative;
+  left: 85%;
+  bottom: 65px;
+}
+.restaurant .restaurant-bloc__card .fa-heart:active {
+  color: #9356DC;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FF79DA;
 }
 
 .bottom {
