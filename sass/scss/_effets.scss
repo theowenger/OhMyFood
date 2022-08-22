@@ -1,3 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//Animation loading spinner
+.animation {
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 1000%;
+	margin-left: auto;
+	margin-right: auto;
+	animation: fill-up 3.7s;
+	animation-fill-mode: forwards;
+	transform-origin: bottom;
+}
+
+@keyframes fill-up {
+	0% {transform: scale(100%);}
+	99% {transform: scaleY(100%);}
+	100% {transform: scale(0%);}
+}
+
+.container {
+
+	display: flex;
+	justify-content: center;
+	border: 1px transparent solid;
+	width: 200px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	/*animation*/
+	animation: rotate--1 1200ms;
+	transform: rotate(0deg) scaleX(1);
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.17,.67,0,.97);
+}
+@keyframes rotate--1 {
+    0% { transform: rotate(90deg) scaleX(0.1) scaleY(1.5); }
+    100% { rotate:(0deg) scaleX(1);}
+    }
+
+.band--1 {
+	background: linear-gradient(to bottom, #99E2D0, white);
+		width: 300px;
+		filter: saturate(300%);
+	/*animation*/
+	animation: grow--1 2.5s;
+	transform: scaleX(0.3) skewX(-15deg);
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	transform-origin: right;
+	animation-timing-function: cubic-bezier(.17,.67,0,.97);
+}
+
+.band--2 {
+	background: linear-gradient(to top, white, #FF79DA);
+	width: 300px;
+	filter: saturate(300%);
+	/*animation*/
+	animation: grow--1 2.5s;
+	transform: scaleX(0.3) skewX(-15deg);
+	animation-delay: 1s;
+	animation-fill-mode: forwards;animation-direction: alternate;
+	transform-origin: left;
+	animation-timing-function: cubic-bezier(.17,.67,0,.97);
+}
+@keyframes grow--1 {
+    0% { transform: skewX(0deg) scaleX(0.0.5); }
+    50% { transform: skewX(-15deg)scaleX(10) translateY(0px); }
+	100% {transform: translateY(-1000px);}
+}
+.container--2 {
+	position: relative;
+	bottom: 628px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	align-content: center;
+}
+.logo {
+	font-family: impact;
+	font-size: 30px;
+background: linear-gradient(to top, white, #99E2D0);
+	border-radius: 25px 25px 25px 25px;
+	box-shadow: #9356DC 20px 20px 0px;
+	color: #9356DC;
+	text-align: center;
+	filter: saturate(200%);
+	transform: rotate(0deg) scale(0);
+	line-height: 70px;
+	width: 250px;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	/*Animation*/
+	animation-name: anim-logo;
+	animation-fill-mode: forwards;
+	animation-duration: 2800ms;
+	animation-delay:1000ms;
+	transform: scale(0), skew(0deg);
+}
+
+@keyframes anim-logo {
+    0% { transform: rotate(720deg) scale(0); }
+	30% { transform: rotate(0deg) scale(1); }
+	80% {transform: translateY(0px);}
+	90% {transform: translateY(-50px);}
+    100% { transform: translateY(800px) scale(0); } 
+}

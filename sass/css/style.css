@@ -4,6 +4,142 @@
   border-radius: 25px 25px 25px 25px;
 }
 
+.animation {
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 1000%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fill-up 3.7s;
+  animation-fill-mode: forwards;
+  transform-origin: bottom;
+}
+
+@keyframes fill-up {
+  0% {
+    transform: scale(100%);
+  }
+  99% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scale(0%);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  border: 1px transparent solid;
+  width: 200px;
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  /*animation*/
+  animation: rotate--1 1200ms;
+  transform: rotate(0deg) scaleX(1);
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0, 0.97);
+}
+
+@keyframes rotate--1 {
+  0% {
+    transform: rotate(90deg) scaleX(0.1) scaleY(1.5);
+  }
+  100% {
+    rotate: 0deg scaleX(1);
+  }
+}
+.band--1 {
+  background: linear-gradient(to bottom, #99E2D0, white);
+  width: 300px;
+  filter: saturate(300%);
+  /*animation*/
+  animation: grow--1 2.5s;
+  transform: scaleX(0.3) skewX(-15deg);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  transform-origin: right;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0, 0.97);
+}
+
+.band--2 {
+  background: linear-gradient(to top, white, #FF79DA);
+  width: 300px;
+  filter: saturate(300%);
+  /*animation*/
+  animation: grow--1 2.5s;
+  transform: scaleX(0.3) skewX(-15deg);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  transform-origin: left;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0, 0.97);
+}
+
+@keyframes grow--1 {
+  0% {
+    transform: skewX(0deg) scaleX(0 0.5);
+  }
+  50% {
+    transform: skewX(-15deg) scaleX(10) translateY(0px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+.container--2 {
+  position: relative;
+  bottom: 628px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+
+.logo {
+  font-family: impact;
+  font-size: 30px;
+  background: linear-gradient(to top, white, #99E2D0);
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: #9356DC 20px 20px 0px;
+  color: #9356DC;
+  text-align: center;
+  filter: saturate(200%);
+  transform: rotate(0deg) scale(0);
+  line-height: 70px;
+  width: 250px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  /*Animation*/
+  animation-name: anim-logo;
+  animation-fill-mode: forwards;
+  animation-duration: 2800ms;
+  animation-delay: 1000ms;
+  transform: scale(0), skew(0deg);
+}
+
+@keyframes anim-logo {
+  0% {
+    transform: rotate(720deg) scale(0);
+  }
+  30% {
+    transform: rotate(0deg) scale(1);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(800px) scale(0);
+  }
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -122,12 +258,25 @@ header .title__adress .fa-location-dot {
   font-size: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -moz-overflow: hidden;
   width: 80%;
   height: 65px;
+  animation-name: menu-scale;
+  transform: scaleX(1);
+  animation-duration: 3000ms;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
   overflow: inherit;
   height: auto;
   background-color: #f6f6f6;
+}
+@keyframes menu-scale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .utilisation .exploration__card .menu__description {
   position: relative;
@@ -142,8 +291,13 @@ header .title__adress .fa-location-dot {
 }
 .utilisation .exploration__card p {
   display: flex;
+  text-overflow: ellipsis;
+}
+.utilisation .exploration__card h3 {
+  text-overflow: ellipsis;
 }
 .utilisation .exploration__card .fa-circle-check {
+  z-index: 1;
   position: relative;
   left: 100%;
   bottom: 90px;
@@ -155,6 +309,7 @@ header .title__adress .fa-location-dot {
   border-radius: 0px 20px 20px 0px;
   font-size: 2rem;
   color: #fff;
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
   animation-direction: reverse;
 }
@@ -334,9 +489,22 @@ header .title__adress .fa-location-dot {
   font-size: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -moz-overflow: hidden;
   width: 80%;
   height: 65px;
+  animation-name: menu-scale;
+  transform: scaleX(1);
+  animation-duration: 3000ms;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
+}
+@keyframes menu-scale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__starter .menu__choice .menu__description {
   position: relative;
@@ -351,8 +519,13 @@ header .title__adress .fa-location-dot {
 }
 .menu__starter .menu__choice p {
   display: flex;
+  text-overflow: ellipsis;
+}
+.menu__starter .menu__choice h3 {
+  text-overflow: ellipsis;
 }
 .menu__starter .menu__choice .fa-circle-check {
+  z-index: 1;
   position: relative;
   left: 100%;
   bottom: 90px;
@@ -364,6 +537,7 @@ header .title__adress .fa-location-dot {
   border-radius: 0px 20px 20px 0px;
   font-size: 2rem;
   color: #fff;
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
   animation-direction: reverse;
 }
@@ -414,9 +588,22 @@ header .title__adress .fa-location-dot {
   font-size: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -moz-overflow: hidden;
   width: 80%;
   height: 65px;
+  animation-name: menu-scale;
+  transform: scaleX(1);
+  animation-duration: 3000ms;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
+}
+@keyframes menu-scale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__main .menu__choice .menu__description {
   position: relative;
@@ -431,8 +618,13 @@ header .title__adress .fa-location-dot {
 }
 .menu__main .menu__choice p {
   display: flex;
+  text-overflow: ellipsis;
+}
+.menu__main .menu__choice h3 {
+  text-overflow: ellipsis;
 }
 .menu__main .menu__choice .fa-circle-check {
+  z-index: 1;
   position: relative;
   left: 100%;
   bottom: 90px;
@@ -444,6 +636,7 @@ header .title__adress .fa-location-dot {
   border-radius: 0px 20px 20px 0px;
   font-size: 2rem;
   color: #fff;
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
   animation-direction: reverse;
 }
@@ -494,9 +687,22 @@ header .title__adress .fa-location-dot {
   font-size: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -moz-overflow: hidden;
   width: 80%;
   height: 65px;
+  animation-name: menu-scale;
+  transform: scaleX(1);
+  animation-duration: 3000ms;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
+}
+@keyframes menu-scale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu__dessert .menu__choice .menu__description {
   position: relative;
@@ -511,8 +717,13 @@ header .title__adress .fa-location-dot {
 }
 .menu__dessert .menu__choice p {
   display: flex;
+  text-overflow: ellipsis;
+}
+.menu__dessert .menu__choice h3 {
+  text-overflow: ellipsis;
 }
 .menu__dessert .menu__choice .fa-circle-check {
+  z-index: 1;
   position: relative;
   left: 100%;
   bottom: 90px;
@@ -524,6 +735,7 @@ header .title__adress .fa-location-dot {
   border-radius: 0px 20px 20px 0px;
   font-size: 2rem;
   color: #fff;
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
   animation-direction: reverse;
 }
@@ -625,8 +837,8 @@ header .title__adress .fa-location-dot {
   }
   header .discover {
     grid-row-start: 3;
-    padding-bottom: 2%;
-    padding-top: 2%;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
@@ -668,12 +880,12 @@ header .title__adress .fa-location-dot {
   .exploration .exploration__card .card__text {
     position: relative;
     top: 30px;
-    right: 75px;
+    right: 65px;
   }
   .exploration .exploration__card i {
     position: relative;
     top: 90px;
-    left: 55px;
+    left: 65px;
     font-size: 1.5em;
   }
   .restaurant-bloc {
