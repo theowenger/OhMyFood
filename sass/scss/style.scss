@@ -179,34 +179,42 @@ header {
             }
         }
 
-        .fa-heart {
-            position: relative;
-            left: 85%;
-            bottom: 65px;
-        }
+        .card__heart {
+                display: flex;
+                flex-direction: column;
+            .fa-heart {
+                position: relative;
+                left: 85%;
+                bottom: 65px;
+            }
 
-        .fa-solid {
-            opacity: 0;
-            font-size: 1.9rem;
-            padding-right: 1%;
-            background: -webkit-radial-gradient($primary-color, $secondary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+            .fa-solid {
+                position: relative;
+                bottom: 95px;
+                transition-duration: 400ms;
+                transform: scaleY(0);
+                opacity: 0.5;
+                font-size: 1.9rem;
+                padding-right: 1%;
+                background: -webkit-radial-gradient($primary-color, $secondary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-        .fa-regular {
-            font-size: 1.9rem;
+            .fa-regular {
+                font-size: 1.9rem;
+                width: 30px;
+                &:active {
 
-            &:active {
-                display: none;
 
-                +.fa-solid {
-                    opacity: 1;
+                    +.fa-solid {
+                        opacity: 1;
+                        transform: scaleY(1);
+                    }
                 }
             }
+
         }
-
-
     }
 }
 
@@ -239,6 +247,7 @@ header {
 
         & .menu__choice {
             @include menu-block;
+            animation-delay: 200ms;
 
             &:hover {
                 @include hover-zoom;
@@ -257,6 +266,7 @@ header {
 
         & .menu__choice {
             @include menu-block;
+            animation-delay: 400ms;
 
             &:hover {
                 @include hover-zoom;
@@ -275,6 +285,7 @@ header {
 
         & .menu__choice {
             @include menu-block;
+            animation-delay: 600ms;
 
             &:hover {
                 @include hover-zoom;
@@ -312,6 +323,11 @@ header {
         font-size: 0.8rem;
         margin-right: 12px;
     }
+
+    & a {
+        color: #eaeaea;
+        text-decoration: none;
+    }
 }
 
 @media (min-width: map-get($breakpoints, desktop)) {
@@ -346,10 +362,12 @@ header {
     .exploration {
         .exploration__card {
             width: 270px;
+
             .exploration__card__list {
                 position: relative;
                 right: 22px;
             }
+
             i {
                 position: relative;
                 right: 20px;

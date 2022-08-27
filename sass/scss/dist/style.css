@@ -236,10 +236,14 @@ header .title__adress .fa-location-dot {
 }
 .discover__btn:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 
@@ -268,11 +272,8 @@ header .title__adress .fa-location-dot {
   animation-name: menu-scale;
   transform: scaleX(1);
   animation-duration: 3000ms;
-  animation-fill-mode: both;
+  -o-animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
-  /*&:active .euro {
-      translate: -20px;
-  }*/
   overflow: inherit;
   height: auto;
   background-color: #f6f6f6;
@@ -303,7 +304,7 @@ header .title__adress .fa-location-dot {
 .utilisation .exploration__card h3 {
   text-overflow: ellipsis;
 }
-.utilisation .exploration__card .box-fa-circle-check {
+.utilisation .exploration__card .fa-circle-check {
   z-index: 1;
   position: relative;
   left: 100%;
@@ -320,19 +321,12 @@ header .title__adress .fa-location-dot {
   transition: all 0.4s;
   animation-direction: reverse;
 }
-.utilisation .exploration__card .fa-circle-check {
-  transform: rotate(0deg);
-  transition-duration: 400ms;
-}
-.utilisation .exploration__card:active .box-fa-circle-check {
+.utilisation .exploration__card:active .fa-circle-check {
   opacity: 1;
   translate: -69px;
 }
-.utilisation .exploration__card:active .fa-circle-check {
-  transform: rotate(-360deg);
-}
 .utilisation .exploration__card:active .menu__description {
-  width: 60%;
+  width: 70%;
   flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -366,10 +360,14 @@ header .title__adress .fa-location-dot {
 }
 .utilisation .exploration__card:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 .utilisation .exploration i {
@@ -405,10 +403,14 @@ header .title__adress .fa-location-dot {
 }
 .restaurant .restaurant-bloc__card:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 .restaurant .restaurant-bloc__card .card__link {
@@ -440,34 +442,27 @@ header .title__adress .fa-location-dot {
   bottom: 50px;
   margin-left: 20px;
 }
-.restaurant .restaurant-bloc__card .card__heart {
-  display: flex;
-  flex-direction: column;
-}
-.restaurant .restaurant-bloc__card .card__heart .fa-heart {
+.restaurant .restaurant-bloc__card .fa-heart {
   position: relative;
   left: 85%;
   bottom: 65px;
 }
-.restaurant .restaurant-bloc__card .card__heart .fa-solid {
-  position: relative;
-  bottom: 95px;
-  transition-duration: 400ms;
-  transform: scaleY(0);
-  opacity: 0.5;
+.restaurant .restaurant-bloc__card .fa-solid {
+  opacity: 0;
   font-size: 1.9rem;
   padding-right: 1%;
   background: -webkit-radial-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant .restaurant-bloc__card .card__heart .fa-regular {
+.restaurant .restaurant-bloc__card .fa-regular {
   font-size: 1.9rem;
-  width: 30px;
 }
-.restaurant .restaurant-bloc__card .card__heart .fa-regular:active + .fa-solid {
+.restaurant .restaurant-bloc__card .fa-regular:active {
+  display: none;
+}
+.restaurant .restaurant-bloc__card .fa-regular:active + .fa-solid {
   opacity: 1;
-  transform: scaleY(1);
 }
 
 .menu {
@@ -516,12 +511,8 @@ header .title__adress .fa-location-dot {
   animation-name: menu-scale;
   transform: scaleX(1);
   animation-duration: 3000ms;
-  animation-fill-mode: both;
+  -o-animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
-  /*&:active .euro {
-      translate: -20px;
-  }*/
-  animation-delay: 200ms;
 }
 @keyframes menu-scale {
   0% {
@@ -549,7 +540,7 @@ header .title__adress .fa-location-dot {
 .menu__starter .menu__choice h3 {
   text-overflow: ellipsis;
 }
-.menu__starter .menu__choice .box-fa-circle-check {
+.menu__starter .menu__choice .fa-circle-check {
   z-index: 1;
   position: relative;
   left: 100%;
@@ -566,19 +557,12 @@ header .title__adress .fa-location-dot {
   transition: all 0.4s;
   animation-direction: reverse;
 }
-.menu__starter .menu__choice .fa-circle-check {
-  transform: rotate(0deg);
-  transition-duration: 400ms;
-}
-.menu__starter .menu__choice:active .box-fa-circle-check {
+.menu__starter .menu__choice:active .fa-circle-check {
   opacity: 1;
   translate: -69px;
 }
-.menu__starter .menu__choice:active .fa-circle-check {
-  transform: rotate(-360deg);
-}
 .menu__starter .menu__choice:active .menu__description {
-  width: 60%;
+  width: 70%;
   flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -593,10 +577,14 @@ header .title__adress .fa-location-dot {
 }
 .menu__starter .menu__choice:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 .menu__main h2 {
@@ -626,12 +614,8 @@ header .title__adress .fa-location-dot {
   animation-name: menu-scale;
   transform: scaleX(1);
   animation-duration: 3000ms;
-  animation-fill-mode: both;
+  -o-animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
-  /*&:active .euro {
-      translate: -20px;
-  }*/
-  animation-delay: 400ms;
 }
 @keyframes menu-scale {
   0% {
@@ -659,7 +643,7 @@ header .title__adress .fa-location-dot {
 .menu__main .menu__choice h3 {
   text-overflow: ellipsis;
 }
-.menu__main .menu__choice .box-fa-circle-check {
+.menu__main .menu__choice .fa-circle-check {
   z-index: 1;
   position: relative;
   left: 100%;
@@ -676,19 +660,12 @@ header .title__adress .fa-location-dot {
   transition: all 0.4s;
   animation-direction: reverse;
 }
-.menu__main .menu__choice .fa-circle-check {
-  transform: rotate(0deg);
-  transition-duration: 400ms;
-}
-.menu__main .menu__choice:active .box-fa-circle-check {
+.menu__main .menu__choice:active .fa-circle-check {
   opacity: 1;
   translate: -69px;
 }
-.menu__main .menu__choice:active .fa-circle-check {
-  transform: rotate(-360deg);
-}
 .menu__main .menu__choice:active .menu__description {
-  width: 60%;
+  width: 70%;
   flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -703,10 +680,14 @@ header .title__adress .fa-location-dot {
 }
 .menu__main .menu__choice:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 .menu__dessert h2 {
@@ -736,12 +717,8 @@ header .title__adress .fa-location-dot {
   animation-name: menu-scale;
   transform: scaleX(1);
   animation-duration: 3000ms;
-  animation-fill-mode: both;
+  -o-animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.43, 0.05, 0, 1.34);
-  /*&:active .euro {
-      translate: -20px;
-  }*/
-  animation-delay: 600ms;
 }
 @keyframes menu-scale {
   0% {
@@ -769,7 +746,7 @@ header .title__adress .fa-location-dot {
 .menu__dessert .menu__choice h3 {
   text-overflow: ellipsis;
 }
-.menu__dessert .menu__choice .box-fa-circle-check {
+.menu__dessert .menu__choice .fa-circle-check {
   z-index: 1;
   position: relative;
   left: 100%;
@@ -786,19 +763,12 @@ header .title__adress .fa-location-dot {
   transition: all 0.4s;
   animation-direction: reverse;
 }
-.menu__dessert .menu__choice .fa-circle-check {
-  transform: rotate(0deg);
-  transition-duration: 400ms;
-}
-.menu__dessert .menu__choice:active .box-fa-circle-check {
+.menu__dessert .menu__choice:active .fa-circle-check {
   opacity: 1;
   translate: -69px;
 }
-.menu__dessert .menu__choice:active .fa-circle-check {
-  transform: rotate(-360deg);
-}
 .menu__dessert .menu__choice:active .menu__description {
-  width: 60%;
+  width: 70%;
   flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -813,10 +783,14 @@ header .title__adress .fa-location-dot {
 }
 .menu__dessert .menu__choice:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 .menu__command {
@@ -845,10 +819,14 @@ header .title__adress .fa-location-dot {
 }
 .menu__command:not(:hover) {
   transition-duration: 300ms;
-  -webkit-transform: scale(1); /* Safari and Chrome */
-  -moz-transform: scale(1); /* Firefox */
-  -ms-transform: scale(1); /* IE 9 */
-  -o-transform: scale(1); /* Opera */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -o-transform: scale(1);
+  /* Opera */
   transform: scale(1);
 }
 
@@ -879,25 +857,22 @@ header .title__adress .fa-location-dot {
 @media (min-width: 1024px) {
   header {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 100%;
   }
   header .title {
-    grid-row-start: 1;
+    grid-row-start: 2;
     padding-bottom: 2%;
     padding-top: 2%;
   }
+  header .title .menulink__ohmyfood {
+    width: 30%;
+  }
   header .title__adress {
     grid-row-start: 1;
-    grid-column-start: 4;
-    padding-bottom: 10%;
-    background-color: #fff;
-    box-shadow: none;
-    line-height: 2em;
+    padding-bottom: 3%;
   }
   header .discover {
     grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 5;
     padding-bottom: 0.5%;
     padding-top: 0.5%;
     display: grid;
@@ -925,6 +900,7 @@ header .title__adress .fa-location-dot {
     grid-column-start: 3;
     grid-column-end: 3;
   }
+
   .exploration {
     display: grid;
     grid-template-columns: 300px 300px 300px;
@@ -949,12 +925,14 @@ header .title__adress .fa-location-dot {
     left: 65px;
     font-size: 1.5em;
   }
+
   .restaurant-bloc {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 2em;
     justify-content: space-around;
   }
+
   .menu {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -976,6 +954,7 @@ header .title__adress .fa-location-dot {
     margin-bottom: 50px;
     grid-area: 3/2;
   }
+
   .bottom {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -997,30 +976,14 @@ header .title__adress .fa-location-dot {
     position: relative;
     right: 20px;
   }
+
   .menu__starter .menu__choice {
     width: 100%;
-    font-size: 0.8em;
-    height: 50px;
-  }
-  .menu__starter .menu__choice .box-fa-circle-check {
-    height: 100px;
   }
   .menu__main .menu__choice {
     width: 100%;
-    font-size: 0.8em;
-    height: 50px;
-  }
-  .menu__main .menu__choice .box-fa-circle-check {
-    height: 100px;
   }
   .menu__dessert .menu__choice {
     width: 100%;
-    font-size: 0.8em;
-    height: 50px;
-  }
-  .menu__dessert .menu__choice .box-fa-circle-check {
-    height: 100px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

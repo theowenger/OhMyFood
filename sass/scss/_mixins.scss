@@ -1,3 +1,7 @@
+
+@import "variables";
+
+
 @mixin menu-block {
     background-color: #fff;
     border: 1px $font-color solid;
@@ -21,7 +25,7 @@
     animation-name: menu-scale;
     transform: scaleX(1);
     animation-duration: 3000ms;
-    -o-animation-fill-mode: forwards;
+    animation-fill-mode: both;
     animation-timing-function: cubic-bezier(.43,.05,0,1.34);
     @keyframes menu-scale {
         0%{ opacity:(0);}
@@ -43,11 +47,14 @@
         display: flex;
         text-overflow: ellipsis;
     }
+    /*&:active .euro {
+        translate: -20px;
+    }*/
     & h3 {
         text-overflow: ellipsis;
     }
 
-    .fa-circle-check {
+    .box-fa-circle-check {
         z-index: 1;
         position: relative;
         left: 100%;
@@ -64,12 +71,19 @@
         transition: all  .4s;
         animation-direction: reverse;
     }
-    &:active .fa-circle-check {
+    .fa-circle-check {
+        transform: rotate(0deg);
+        transition-duration: 400ms;
+    }
+    &:active .box-fa-circle-check {
         opacity: 1;
         translate: -69px;
     }
+    &:active .fa-circle-check {
+        transform: rotate(-360deg);
+    }
     &:active .menu__description {
-        width: 70%;
+        width: 60%;
        flex-wrap: nowrap;
        overflow: hidden;
        text-overflow: ellipsis;
@@ -155,21 +169,27 @@
 
 @mixin desktop-header {
     display: grid;
-    grid-template-columns:100%;
+    grid-template-columns:25% 25% 25% 25%;
     .title {
-        grid-row-start: 2;
+        grid-row-start: 1;
         padding-bottom: 2%;
         padding-top: 2%;
         .menulink__ohmyfood {
-            width: 30%;
+
         }
     }
     .title__adress {
         grid-row-start: 1;
-        padding-bottom: 3%;
+        grid-column-start: 4;
+        padding-bottom: 10%;
+        background-color: #fff;
+        box-shadow: none;
+        line-height: 2em;
     }
     .discover {
         grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
         padding-bottom: 0.5%;
         padding-top: 0.5%;
         display: grid;
@@ -249,6 +269,12 @@
     &__starter {
         & .menu__choice {
             width: 100%;
+            font-size: 0.8em;
+            height: 50px;
+
+            & .box-fa-circle-check {
+                height: 100px;
+            }
         }
     }
 
@@ -256,6 +282,12 @@
 
         & .menu__choice {
             width: 100%;
+            font-size: 0.8em;
+            height: 50px;
+
+            & .box-fa-circle-check {
+                height: 100px;
+            }
         }
     }
 
@@ -263,6 +295,12 @@
 
         & .menu__choice {
             width: 100%;
+            font-size: 0.8em;
+            height: 50px;
+
+            & .box-fa-circle-check {
+                height: 100px;
+            }
         }
     }
     

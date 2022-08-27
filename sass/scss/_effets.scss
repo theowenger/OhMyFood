@@ -1,3 +1,9 @@
+@import "button";
+@import "function";
+@import "mixins";
+@import "variables";
+
+
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -44,7 +50,7 @@
     }
 
 .band--1 {
-	background: linear-gradient(to bottom, #99E2D0, white);
+	background: linear-gradient(to bottom, $third-color, white);
 		width: 300px;
 		filter: saturate(300%);
 	/*animation*/
@@ -58,7 +64,7 @@
 }
 
 .band--2 {
-	background: linear-gradient(to top, white, #FF79DA);
+	background: linear-gradient(to top, white, $secondary-color);
 	width: 300px;
 	filter: saturate(300%);
 	/*animation*/
@@ -85,10 +91,10 @@
 .logo {
 	font-family: impact;
 	font-size: 30px;
-background: linear-gradient(to top, white, #99E2D0);
+background: linear-gradient(to top, white, $third-color);
 	border-radius: 25px 25px 25px 25px;
 	box-shadow: #9356DC 20px 20px 0px;
-	color: #9356DC;
+	color: $primary-color;
 	text-align: center;
 	filter: saturate(200%);
 	transform: rotate(0deg) scale(0);
