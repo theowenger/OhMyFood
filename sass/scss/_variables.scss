@@ -6,6 +6,7 @@ $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 $font-color: #f6f6f6;
 $primary-color-hover: #f5edff;
+$font-color-grey: #353535;
 
 //breakpoint
 
@@ -14,4 +15,10 @@ $breakpoints: (
 );
 $breakpoints-1: (
     little-mobile: (400px)
+);
+$breakpoints-2: (
+    min-tablet: (768px)
+);
+$breakpoints-3: (
+    max-tablet: (1023px)
 );
