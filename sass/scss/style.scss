@@ -188,9 +188,11 @@ header {
                 position: relative;
                 left: 85%;
                 bottom: 65px;
+                width: 30px;
             }
 
             .fa-solid {
+                width: 30px;
                 position: relative;
                 bottom: 95px;
                 transition-duration: 400ms;
@@ -198,7 +200,8 @@ header {
                 transform-origin: 50% 10%;
                 opacity: 0.5;
                 font-size: 1.9rem;
-                padding-right: 1%;
+                padding: 0%;
+                margin: 0%;
                 background: -webkit-radial-gradient($primary-color, $secondary-color);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -207,7 +210,7 @@ header {
             .fa-regular {
                 font-size: 1.9rem;
                 width: 30px;
-                &:active {
+                &:hover {
 
 
                     +.fa-solid {
@@ -236,11 +239,13 @@ header {
     .card__heart {
         display: flex;
         flex-direction: column;
+
         height: 0px;
     .fa-heart {
         position: relative;
         left: 95%;
         bottom: 35px;
+        width: 30px;
     }
 
     .fa-solid {
@@ -260,7 +265,7 @@ header {
     .fa-regular {
         font-size: 1.9rem;
         width: 30px;
-        &:active {
+        &:hover {
 
 
             +.fa-solid {

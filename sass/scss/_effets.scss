@@ -13,7 +13,7 @@
 	background-color: rgba(255, 255, 255, 0.5);
 	z-index: 1;
 	position: absolute;
-	width: 100%;
+	width:100%;
 	height: 1000%;
 	margin-left: auto;
 	margin-right: auto;
@@ -33,7 +33,7 @@
 	display: flex;
 	justify-content: center;
 	border: 1px transparent solid;
-	width: 200px;
+	width: 100px;
 	height: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -43,10 +43,14 @@
 	animation-fill-mode: forwards;
 	animation-direction: alternate;
 	animation-timing-function: cubic-bezier(.17,.67,0,.97);
+	@media (min-width: map-get($breakpoints, desktop)) {
+		width: 500px;
+	}
 }
 @keyframes rotate--1 {
     0% { transform: rotate(90deg) scaleX(0.1) scaleY(1.5); }
-    100% { rotate:(0deg) scaleX(1);}
+    99% { rotate:(0deg) scaleX(1);}
+	100% { rotate:(0deg) scaleX(0);}
     }
 
 .band--1 {
@@ -78,7 +82,8 @@
 @keyframes grow--1 {
     0% { transform: skewX(0deg) scaleX(0.0.5); }
     50% { transform: skewX(-15deg)scaleX(10) translateY(0px); }
-	100% {transform: translateY(-1000px);}
+	99% {transform: scaleX(10);}
+	100% {transform: translateY(-1000px) scaleX(0);}
 }
 .container--2 {
 	position: relative;

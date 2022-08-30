@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   border: 1px transparent solid;
-  width: 200px;
+  width: 100px;
   height: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -47,13 +47,21 @@
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.17, 0.67, 0, 0.97);
 }
+@media (min-width: 1024px) {
+  .container {
+    width: 500px;
+  }
+}
 
 @keyframes rotate--1 {
   0% {
     transform: rotate(90deg) scaleX(0.1) scaleY(1.5);
   }
-  100% {
+  99% {
     rotate: 0deg scaleX(1);
+  }
+  100% {
+    rotate: 0deg scaleX(0);
   }
 }
 .band--1 {
@@ -91,8 +99,11 @@
   50% {
     transform: skewX(-15deg) scaleX(10) translateY(0px);
   }
+  99% {
+    transform: scaleX(10);
+  }
   100% {
-    transform: translateY(-1000px);
+    transform: translateY(-1000px) scaleX(0);
   }
 }
 .container--2 {
@@ -456,8 +467,10 @@ header .title__adress .fa-location-dot {
   position: relative;
   left: 85%;
   bottom: 65px;
+  width: 30px;
 }
 .restaurant .restaurant-bloc__card .card__heart .fa-solid {
+  width: 30px;
   position: relative;
   bottom: 95px;
   transition-duration: 400ms;
@@ -465,7 +478,8 @@ header .title__adress .fa-location-dot {
   transform-origin: 50% 10%;
   opacity: 0.5;
   font-size: 1.9rem;
-  padding-right: 1%;
+  padding: 0%;
+  margin: 0%;
   background: -webkit-radial-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -474,7 +488,7 @@ header .title__adress .fa-location-dot {
   font-size: 1.9rem;
   width: 30px;
 }
-.restaurant .restaurant-bloc__card .card__heart .fa-regular:active + .fa-solid {
+.restaurant .restaurant-bloc__card .card__heart .fa-regular:hover + .fa-solid {
   opacity: 1;
   transform: scaleY(1);
 }
@@ -499,6 +513,7 @@ header .title__adress .fa-location-dot {
   position: relative;
   left: 95%;
   bottom: 35px;
+  width: 30px;
 }
 .menu .card__heart .fa-solid {
   position: relative;
@@ -517,7 +532,7 @@ header .title__adress .fa-location-dot {
   font-size: 1.9rem;
   width: 30px;
 }
-.menu .card__heart .fa-regular:active + .fa-solid {
+.menu .card__heart .fa-regular:hover + .fa-solid {
   opacity: 1;
   transform: scaleY(1);
 }
