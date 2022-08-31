@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./sass/scss/style.scss:./sass/css/style.css"
+    "sass": "sass --watch ./sass/scss/style.scss:./sass/css/style.css -w --style compressed",
+    "prefix": "postcss ./sass/css/style.css --use autoprefixer -d ./sass/css/prefixed/"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
     "saas": "^1.0.0"
   }

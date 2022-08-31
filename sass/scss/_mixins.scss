@@ -37,11 +37,18 @@
         bottom: 5px;
         display: inline-block;
         width: 85%;
+        min-width: 65%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         line-height: 1.1rem;
         transition: all  .4s;
+        @media (min-width: map-get($breakpoints, desktop)) {
+            min-width: 50%;
+        }
+        @media (max-width: map-get($breakpoints-1, little-mobile)) {
+            min-width: 50%;
+        }
     }
     & p {
         display: flex;
