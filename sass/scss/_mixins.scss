@@ -280,8 +280,11 @@
 }
 @mixin little-mobile-menu-card {
     &__starter {
+
         & .menu__choice {
-            width: 100%;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 0.8em;
             height: 50px;
 
@@ -294,7 +297,7 @@
     &__main {
 
         & .menu__choice {
-            width: 100%;
+            width: 95%;
             font-size: 0.8em;
             height: 50px;
 
@@ -307,7 +310,7 @@
     &__dessert {
 
         & .menu__choice {
-            width: 100%;
+            width: 95%;
             font-size: 0.8em;
             height: 50px;
 
