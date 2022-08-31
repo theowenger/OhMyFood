@@ -23,9 +23,9 @@
 }
 
 @keyframes fill-up {
-	0% {transform: scale(100%);}
-	99% {transform: scaleY(100%);}
-	100% {transform: scale(0%);}
+	0% {transform: scale(1);}
+	99% {transform: scaleY(1);}
+	100% {transform: scale(0);}
 }
 
 .container {
