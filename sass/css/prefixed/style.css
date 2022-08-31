@@ -99,17 +99,10 @@
 }
 
 @keyframes rotate--1 {
-  0% {
-    -webkit-transform: rotate(90deg) scaleX(0.1) scaleY(1.5);
-            transform: rotate(90deg) scaleX(0.1) scaleY(1.5);
+  0% { transform: rotate(90deg) scaleX(0.1) scaleY(1.5); }
+  99% { transform: scaleX(1);}
+100% { transform: scaleX(1);}
   }
-  99% {
-    transform: rotate(0deg) scaleX(1);
-  }
-  100% {
-    transform: rotate(0deg) scaleX(0);
-  }
-}
 .band--1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#99E2D0), to(white));
   background: -o-linear-gradient(top, #99E2D0, white);
