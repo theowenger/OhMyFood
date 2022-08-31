@@ -306,7 +306,7 @@ header {
 
         & .menu__choice {
             @include menu-block;
-            animation-delay: 200ms;
+            animation-delay: 150ms;
 
             &:hover {
                 @include hover-zoom;
@@ -325,7 +325,7 @@ header {
 
         & .menu__choice {
             @include menu-block;
-            animation-delay: 400ms;
+            animation-delay: 300ms;
 
             &:hover {
                 @include hover-zoom;
