@@ -82,7 +82,7 @@
     }
     &:active .box-fa-circle-check {
         opacity: 1;
-        translate: -69px;
+        transform: translate(-69px);
     }
     &:active .fa-circle-check {
         transform: rotate(-360deg);

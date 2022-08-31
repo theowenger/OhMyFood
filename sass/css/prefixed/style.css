@@ -104,10 +104,10 @@
             transform: rotate(90deg) scaleX(0.1) scaleY(1.5);
   }
   99% {
-    rotate: 0deg scaleX(1);
+    transform: rotate(0deg) scaleX(1);
   }
   100% {
-    rotate: 0deg scaleX(0);
+    transform: rotate(0deg) scaleX(0);
   }
 }
 .band--1 {
@@ -183,8 +183,8 @@
 
 @keyframes grow--1 {
   0% {
-    -webkit-transform: skewX(0deg) scaleX(0 0.5);
-            transform: skewX(0deg) scaleX(0 0.5);
+    -webkit-transform: skewX(0deg) scaleX(0.5);
+            transform: skewX(0deg) scaleX(0.5);
   }
   50% {
     -webkit-transform: skewX(-15deg) scaleX(10) translateY(0px);
@@ -239,9 +239,9 @@
           animation-duration: 2800ms;
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
-  -webkit-transform: scale(0), skew(0deg);
-      -ms-transform: scale(0), skew(0deg);
-          transform: scale(0), skew(0deg);
+  -webkit-transform: scale(0) skew(0deg);
+      -ms-transform: scale(0) skew(0deg);
+          transform: scale(0) skew(0deg);
 }
 
 @-webkit-keyframes anim-logo {
@@ -517,7 +517,7 @@ header .title__adress .fa-location-dot {
 }
 .utilisation .exploration__card:active .box-fa-circle-check {
   opacity: 1;
-  translate: -69px;
+  transform: translate(-69px);
 }
 .utilisation .exploration__card:active .fa-circle-check {
   -webkit-transform: rotate(-360deg);
@@ -863,7 +863,7 @@ header .title__adress .fa-location-dot {
 }
 .menu__starter .menu__choice:active .box-fa-circle-check {
   opacity: 1;
-  translate: -69px;
+  transform: translate(-69px);
 }
 .menu__starter .menu__choice:active .fa-circle-check {
   -webkit-transform: rotate(-360deg);
@@ -1005,7 +1005,7 @@ header .title__adress .fa-location-dot {
 }
 .menu__main .menu__choice:active .box-fa-circle-check {
   opacity: 1;
-  translate: -69px;
+  transform: translate(-69px);
 }
 .menu__main .menu__choice:active .fa-circle-check {
   -webkit-transform: rotate(-360deg);
@@ -1147,7 +1147,7 @@ header .title__adress .fa-location-dot {
 }
 .menu__dessert .menu__choice:active .box-fa-circle-check {
   opacity: 1;
-  translate: -69px;
+  transform: translate(-69px);
 }
 .menu__dessert .menu__choice:active .fa-circle-check {
   -webkit-transform: rotate(-360deg);
