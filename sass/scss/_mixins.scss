@@ -62,6 +62,9 @@
 
     .box-fa-circle-check {
         z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         left: 100%;
         bottom: 90px;
@@ -80,15 +83,16 @@
     .fa-circle-check {
         transform: rotate(0deg);
         transition-duration: 400ms;
+
     }
-    &:active .box-fa-circle-check {
+    &:focus .box-fa-circle-check {
         opacity: 1;
         transform: translate(-69px);
     }
-    &:active .fa-circle-check {
-        transform: rotate(-360deg);
+    &:focus .fa-circle-check {
+        transform: rotate(360deg);
     }
-    &:active .menu__description {
+    &:focus .menu__description {
         width: 63%;
        flex-wrap: nowrap;
        overflow: hidden;

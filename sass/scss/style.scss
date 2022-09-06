@@ -212,14 +212,17 @@ header {
             .fa-regular {
                 font-size: 1.9rem;
                 width: 30px;
-
+                -webkit-text-stroke: 1px transparent;
                 &:hover {
+                    background-color: red;
+                    background: -webkit-radial-gradient($primary-color, $secondary-color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
-
-                    +.fa-solid {
+                    /*+.fa-solid {
                         opacity: 1;
                         transform: scaleY(1);
-                    }
+                    }*/
                 }
             }
 
