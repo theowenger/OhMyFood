@@ -1,0 +1,167 @@
+.main {
+    position: relative;
+
+    img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 900px;
+        background-color: $background;
+        position: absolute;
+        padding: 25px 20px 20px 20px;
+        border-radius: 35px 35px 0 0;
+        margin-left: auto;
+        margin-right: auto;
+        left:0;
+        right:0;
+        bottom: -2px;
+        font-family: $font-title;
+        font-size: 26px;
+    }
+}
+
+.menu {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: $background;
+    font-family: $font-txt;
+
+    &__section {
+        width: 98%;
+        min-height: 360px;
+        margin: auto;
+
+        .number1{
+        animation: slide 1s  ease-in-out;    
+        }
+        .number2{
+        animation: slide 1.2s  ease-in-out;    
+        }
+        .number3{
+        animation: slide 1.4s  ease-in-out;    
+        }
+    }
+    &__div {
+        position: relative;
+        width: 99%;
+        height: 70px;
+        padding: 12px 16px;
+        background: white;
+        margin-bottom: 15px;
+        height: 70px;
+        margin-top: 14px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow:1px 5px 4px $shadow;
+        transition: all 1s;
+
+        &:hover,
+        &:active {
+        cursor: pointer;
+        padding-right: 72px;
+        }
+
+        &:hover .menu--check,
+        &:active .menu--check {
+        right: 0;
+        }
+        &:hover .check,
+        &:active .check{
+        transform: rotate(0deg)
+        }
+        
+    }
+
+    h3 {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 12px 0px 5px 10px;
+    }
+
+    &__ligne {
+        background-color: $tertiary;
+        width: 42px;
+        height: 3px;
+        margin-left: 11px;
+    }
+    &__infos { 
+        position: relative;
+        margin: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        
+    }
+    &__sub {
+        p {
+            width: 85%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        span {
+            position: absolute;
+            right: 5px;
+            bottom: 1px;
+        }
+    }
+    &--check {
+        height: 70px;
+        border-radius:0 15px 15px 0;
+        position: absolute;
+        right: -70px;
+        top: 0;
+        color: white;
+        background-color: $tertiary;
+        @include center;
+        width: 70px;
+        transition:  1s;
+        .check {
+            font-size: 25px;
+            transition: 0.8s;
+            transform: rotate(-360deg);
+        }
+    
+    }
+    &__button{
+        background:$background;
+        padding: 60px 0 90px 0;
+        text-align: center;
+    }
+    &--btn {
+        font-size: 15px;
+        color: $background;
+        padding: 16px 50px;
+        border-radius: 26px;
+        background: linear-gradient($secondary 0%, $primary 100%);
+        transition: all 0.5s ease-out;
+
+        &:hover,
+        &:active {
+          filter: brightness(110%);
+        }
+      }
+    
+}
+@keyframes slide{
+    0%{ 
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

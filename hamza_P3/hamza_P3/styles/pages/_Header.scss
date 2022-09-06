@@ -1,0 +1,18 @@
+.header {
+    @include center;
+    width: 100%;
+    height: 70px;
+}
+.header img {
+    padding-top: 10px ;
+    height: 40px;
+    width: 200px;
+    margin: auto;
+}
+.return {
+    color: rgb(54, 54, 54);
+    font-size: 20px;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+}

@@ -185,44 +185,28 @@ header {
         .card__heart {
             display: flex;
             flex-direction: column;
-
-            .fa-heart {
+            .fa-solid {
                 position: relative;
                 left: 85%;
                 bottom: 65px;
                 width: 30px;
-            }
-
-            .fa-solid {
-                width: 30px;
-                position: relative;
-                bottom: 95px;
-                transition-duration: 400ms;
-                transform: scaleY(0);
-                transform-origin: 50% 10%;
-                opacity: 0.5;
-                font-size: 1.9rem;
-                padding: 0%;
-                margin: 0%;
-                background: -webkit-radial-gradient($primary-color, $secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .fa-regular {
+                color: #f2f2f2;
                 font-size: 1.9rem;
                 width: 30px;
-                -webkit-text-stroke: 1px transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: grey;
+
                 &:hover {
-                    background-color: red;
-                    background: -webkit-radial-gradient($primary-color, $secondary-color);
+                    animation: heart-hover 400ms ease-out;
+                    @keyframes heart-hover {
+                        from{transform: scale(0.8)};
+                        to{transform: scale(1);}
+                    }
+                    cursor: pointer;
+                    background: linear-gradient(to bottom left, $primary-color, $secondary-color);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-
-                    /*+.fa-solid {
-                        opacity: 1;
-                        transform: scaleY(1);
-                    }*/
+                    -webkit-text-stroke-width: 0;
                 }
             }
 
@@ -256,39 +240,29 @@ header {
             display: flex;
             flex-direction: column;
             height: 0px;
-            position: relative;
-            bottom: 15px;
 
-            .fa-heart {
-                position: relative;
-                width: 30px;
-            }
 
             .fa-solid {
                 position: relative;
-                bottom: 30px;
-                transition-duration: 400ms;
-                transform: scaleY(0);
-                transform-origin: 0% 60%;
-                opacity: 0;
-                font-size: 1.9rem;
-                padding-right: 1%;
-                background: -webkit-radial-gradient($primary-color, $secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .fa-regular {
+                bottom: 15px;
+                width: 30px;
+                color: #f2f2f2;
                 font-size: 1.9rem;
                 width: 30px;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: grey;
 
                 &:hover {
-
-
-                    +.fa-solid {
-                        opacity: 1;
-                        transform: scaleY(1);
+                    animation: heart-hover 400ms ease-out;
+                    @keyframes heart-hover {
+                        from{transform: scale(0.8)};
+                        to{transform: scale(1);}
                     }
+                    cursor: pointer;
+                    background: linear-gradient(to bottom left, $primary-color, $secondary-color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 0;
                 }
             }
         }
