@@ -4,7 +4,6 @@
 
 @mixin menu-block {
     background-color: #fff;
-    border: 1px $font-color solid;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 2px 2px 5px lightgray;
     margin-bottom: 5%;
@@ -294,7 +293,7 @@
             height: 50px;
 
             & .box-fa-circle-check {
-                height: 100px;
+                height: 90px;
             }
         }
     }
